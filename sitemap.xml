@@ -4,7 +4,7 @@
   <url>
     <loc>http://www.chengxinsong.cn/17-09-watermark.html</loc>
     
-    <lastmod>2017-09-26T07:51:23.769Z</lastmod>
+    <lastmod>2017-09-26T08:13:55.637Z</lastmod>
     
   </url>
   
@@ -135,14 +135,14 @@
   </url>
   
   <url>
-    <loc>http://www.chengxinsong.cn/photos-litter/ins.json</loc>
+    <loc>http://www.chengxinsong.cn/photos/ins.json</loc>
     
     <lastmod>2017-09-10T05:12:19.144Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.chengxinsong.cn/photos/ins.json</loc>
+    <loc>http://www.chengxinsong.cn/photos-litter/ins.json</loc>
     
     <lastmod>2017-09-10T05:12:19.144Z</lastmod>
     
@@ -205,20 +205,6 @@
   </url>
   
   <url>
-    <loc>http://www.chengxinsong.cn/assets/demo/hack_demo.html</loc>
-    
-    <lastmod>2017-08-26T08:51:25.772Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.chengxinsong.cn/assets/demo/jiugongge_demo.html</loc>
-    
-    <lastmod>2017-08-26T08:51:25.772Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.chengxinsong.cn/assets/demo/jiugongge_demo2.html</loc>
     
     <lastmod>2017-08-26T08:51:25.772Z</lastmod>
@@ -226,7 +212,21 @@
   </url>
   
   <url>
+    <loc>http://www.chengxinsong.cn/assets/demo/hack_demo.html</loc>
+    
+    <lastmod>2017-08-26T08:51:25.772Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.chengxinsong.cn/assets/demo/mediator/demo.html</loc>
+    
+    <lastmod>2017-08-26T08:51:25.772Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.chengxinsong.cn/assets/demo/jiugongge_demo.html</loc>
     
     <lastmod>2017-08-26T08:51:25.772Z</lastmod>
     
