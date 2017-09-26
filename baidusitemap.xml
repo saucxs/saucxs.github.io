@@ -4,6 +4,45 @@
 
     
   <url>
+    <loc>http://www.chengxinsong.cn/17-09-watermark.html</loc>
+    <lastmod>2017-09-26T07:40:02.038Z</lastmod>
+    <data>
+        <display>
+        <title>watermarkJS水印组件系列一(简单VS复杂)</title>
+        <pubTime>2017-09-26T07:11:51.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>watermark</tag>
+         
+         
+           
+             
+              <breadCrumb title="工作" url="http://www.chengxinsong.cn/categories/work/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.chengxinsong.cn/css3-animater.html</loc>
+    <lastmod>2017-09-26T07:12:35.487Z</lastmod>
+    <data>
+        <display>
+        <title>css3-animater</title>
+        <pubTime>2017-09-14T01:55:14.000Z</pubTime>
+        
+        <tag>css3</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.chengxinsong.cn/2017-09-16.html</loc>
     <lastmod>2017-09-26T07:06:46.596Z</lastmod>
     <data>
@@ -59,23 +98,6 @@
              
               <breadCrumb title="工作" url="http://www.chengxinsong.cn/categories/work/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.chengxinsong.cn/css3-animater.html</loc>
-    <lastmod>2017-09-17T02:55:22.059Z</lastmod>
-    <data>
-        <display>
-        <title>css3-animater</title>
-        <pubTime>2017-09-14T01:55:14.000Z</pubTime>
-        
-        <tag>css3</tag>
-         
-         
-           
         </display>
     </data>
     </url>
@@ -189,9 +211,9 @@
         <title>github+hexo搭建自己的博客网站（一）基础入门</title>
         <pubTime>2017-08-24T01:17:10.000Z</pubTime>
         
-        <tag>杂谈</tag>
-         
         <tag>前端</tag>
+         
+        <tag>杂谈</tag>
          
          
            
