@@ -1,0 +1,326 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+img,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block
+}
+
+body {
+	line-height: 1.5
+}
+
+ol,
+ul {
+	list-style: none
+}
+
+blockquote,
+q {
+	quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+a {
+	text-decoration: none
+}
+
+.vertical-grand {
+	display: table
+}
+
+.vertical-parent {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center
+}
+
+.hidden {
+	visibility: hidden
+}
+
+.float-left-box {
+	float: left
+}
+
+.float-right-box {
+	float: right
+}
+
+.clearfix {
+	zoom: 1
+}
+
+.clearfix:after {
+	content: "";
+	height: 0;
+	font-size: 0;
+	display: block;
+	visibility: hidden;
+	clear: both
+}
+
+.inline-block {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	letter-spacing: normal;
+	word-spacing: normal;
+	vertical-align: top
+}
+
+.display-none {
+	display: none
+}
+
+.page-center {
+	width: 1000px;
+	margin: 0 auto
+}
+
+.header {
+	height: 80px;
+	background-color: #fff
+}
+
+.header .h-center {
+	height: inherit
+}
+
+.header .h-center .h-c-logo-box {
+	padding: 15px 0 0
+}
+
+.header .h-center .h-c-logo-box .c-l-b-logo {
+	background: url('../img/common-icons-s7abf0718ce.png') 0 0 no-repeat;
+	width: 319px;
+	height: 48px;
+	display: block
+}
+
+.header .h-center .h-c-nav {
+	padding: 28px 0 0
+}
+
+.header .h-center .h-c-nav li {
+	float: left;
+	padding: 0 10px;
+	border-left: 1px solid #ccc
+}
+
+.header .h-center .h-c-nav li:first-child {
+	border-left: none
+}
+
+.header .h-center .h-c-nav li:hover a {
+	color: #329df0
+}
+
+.header .h-center .h-c-nav li.active a {
+	color: #329df0
+}
+
+.header .h-center .h-c-nav li a {
+	line-height: 25px;
+	color: #333;
+	font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei";
+	font-size: 16px
+}
+
+.footer {
+	padding: 30px 0 25px;
+	background-color: #505050
+}
+
+.footer p {
+	text-align: center;
+	line-height: 14px;
+	padding: 0 0 5px;
+	color: #999;
+	font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei";
+	font-size: 14px
+}
+
+#fixed-box {
+	height: 295px;
+	position: fixed;
+	bottom: 100px;
+	right: 0;
+	z-index: 100;
+	font-family: "PingFang SC", "Hiragino Sans GB", "simsun"
+}
+
+#fixed-box .hide-box {
+	width: 59px;
+	height: 150px;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-right: none;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px
+}
+
+#fixed-box .hide-box .title {
+	font: 20px/28px "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei";
+	color: #0a7acc;
+	width: 14px;
+	margin: 0px auto;
+	padding-top: 16px
+}
+
+#fixed-box .hide-box .open-content {
+	display: none
+}
+
+#fixed-box .open-box {
+	background: #fff;
+	border: 1px solid #ccc;
+	border-right: none;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px
+}
+
+#fixed-box .open-box .title {
+	display: none
+}
+
+#fixed-box .open-box .open-content {
+	width: 210px;
+	margin-left: 20px
+}
+
+#fixed-box .open-box .open-content .can-border {
+	border-bottom: 1px solid #ccc
+}
+
+#fixed-box .open-box .open-content .qq-contact {
+	color: #666;
+	padding: 9px 0
+}
+
+#fixed-box .open-box .open-content .qq-contact .text-bold {
+	font-weight: bold
+}
+
+#fixed-box .open-box .open-content .qq-contact .qq-title {
+	font-weight: bold;
+	font-size: 14px;
+	float: left
+}
+
+#fixed-box .open-box .open-content .qq-contact .qq-pic {
+	float: right;
+	background: url('../img/contact-s236418a94f.png') 0 -42px no-repeat;
+	width: 72px;
+	height: 22px;
+	display: block;
+	cursor: pointer;
+	margin: 0 22px 0 0
+}
+
+#fixed-box .open-box .open-content .qq-contact .qq-tel {
+	float: left;
+	font-size: 14px;
+	line-height: 26px
+}
+
+#fixed-box .open-box .open-content .qq-contact .qq-num {
+	margin-left: 90px;
+	font-size: 12px;
+	line-height: 26px
+}
+
+#fixed-box .open-box .open-content .qq-contact .qq-num .q-n-icon {
+	background: url('../img/contact-s236418a94f.png') 0 0 no-repeat;
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	margin: 0 4px 0;
+	vertical-align: middle
+}
+
+#fixed-box .open-box .open-content .qq-contact .qq-num .q-n-txt {
+	vertical-align: middle
+}
+
+#fixed-box .open-box .open-content .qq-contact .work-time {
+	font-size: 12px;
+	color: #aaa
+}
+
+#fixed-box .open-box .open-content .online {
+	padding: 0 0 9px
+}
+
+#fixed-box .open-box .open-content .online .o-txt {
+	margin-bottom: 4px
+}
+
+#fixed-box .open-box .open-content .online .o-txt .qq-title {
+	margin-top: 25px
+}
+
+#fixed-box .open-box .open-content .online .qq-pic {
+	margin: 25px 22px 0 0
+}
+
+#fixed-box .bb-icon {
+	position: absolute;
+	right: 0;
+	top: -42px;
+	background: url('../img/contact-s236418a94f.png') -14px 0 no-repeat;
+	width: 53px;
+	height: 42px;
+	display: block
+}

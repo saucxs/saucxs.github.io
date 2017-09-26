@@ -1,0 +1,44 @@
+/*
+*360Helper Protocol Popup Tips
+*Author : sunpeng3@360.cn
+*Date: 2012-03-16
+*/
+
+.zsp_cls,.zsp_pop,.zsp_con li{ background-image:url(http://p8.qhimg.com/t012250439002d81603.png); background-repeat:no-repeat;}
+.zsp_con ul,.zsp_btnKnow{ background-image:url(http://p9.qhimg.com/t01f0ac977b93dce36b.png); background-repeat:no-repeat;}
+
+.zsp_pop{ background-repeat:repeat-x; box-shadow:4px 4px 8px rgba(51,51,51,.5);}
+
+.zsp_cover{position:absolute; right:0px; top:0px; width:100%; height:800px; background:#000; filter:alpha(opacity=30); -moz-opacity:0.30 ;opacity:0.30; z-index:99998; margin:0; padding:0; display:none;}
+.zsp_pop{ position:fixed; font-size:12px; width:450px; height:284px; overflow:hidden;  border:1px solid #898989; top:50%; left:50%; margin-left:-225px; margin-top:-144px; z-index:100; padding:0; z-index:99999; display:none;  _position:absolute;
+_top:expression(documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 );
+_margin-top:0; background-color:#ebf3fc;}
+.zsp_popIE{ height:140px; margin-top:-70px; background-position:0 -385px;}
+.zsp_show_for_ie,
+.zsp_popIE .zsp_hide_for_ie,
+.zsp_popIE .zsp_btnInst{ display:none;}
+.zsp_popIE .zsp_show_for_ie{ display:inline;}
+.zsp_pop *{ margin:0; padding:0;font-family: "Microsoft YaHei","simsun", Arial, Helvetica, sans-serif;}
+.zsp_popt{ padding:1px 0 0 20px; height:53px; overflow:hidden;}
+.zsp_con h2{ height:36px; font-size:16px; font-weight:bold; color:#54a30d;  padding:14px 0 0 20px;}
+.zsp_cls{ position:absolute; right:1px; top:0px; display:block; width:28px; height:25px;  background-position:0 -287px; background-repeat:no-repeat;}
+.zsp_cls:hover{ background-position:0 -313px;}
+.zsp_con{ height:284px; overflow:hidden;}
+.zsp_con h3{font-size:15px; height:28px; padding:0 0 0 32px; font-weight:bold; color:#000; }
+.zsp_popIE h2,
+.zsp_popIE h3{ padding-left:0; padding-right:0; text-align:center;}
+.zsp_popIE h2{ font-size:15px; padding-top:24px;}
+.zsp_popIE h3{ font-size:14px; padding-bottom:6px;}
+.zsp_con ul{ height:44px; padding:0 0 114px 34px; background-position:34px 44px;}
+.zsp_popIE .zsp_con ul{ display:none;}
+.zsp_con li{ list-style:none;padding:0 0 0 16px; margin:0; list-style:none; background-position:0px -356px; background-repeat:no-repeat; height:20px; line-height:20px; margin-bottom:2px; color:#363636;}
+.zsp_ie_timer{line-height:18px; padding-left:130px; float:left;}
+#zsp_cls_counter{ font-style:normal;}
+.zsp_btnCon{ height:38px; line-height:38px; padding:0 16px 0 22px;}
+.zsp_btnCon a{ color:#0097ff; font-weight:900; margin-right:12px; font-family:"simsun";}
+.zsp_con h3 a{color:#0097ff;font-family:"simsun";}
+.zsp_btnCon a:hover,.zsp_con h3 a:hover{ text-decoration:underline;}
+.zsp_con{ height:284px; overflow:hidden;}
+.zsp_btnKnow{ float:right; width:98px; height:38px; cursor:pointer; background-position:100% -113px;}
+
+#zsp_LinkRouter{ position:absolute; width:0; height:0; top:50%; left:50%; visibility:hidden; border:none; background:none;}
