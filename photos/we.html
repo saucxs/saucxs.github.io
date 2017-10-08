@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://www.chengxinsong.cn">
   <title>影像 | 程新松博客网站safeguradEagle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="游记     我们     毕业     集训   我们一周年           毕业,我们不说再见                               (function() {             var scene, camera, renderer;             var tets=[];             var ROWS=200;">
+  <meta name="description" content="游记     我们     毕业     集训   我们一周年           毕业,我们不说再见">
 <meta name="keywords" content="程新松，沈阳航空航天大学，计算机学院，国家发明专利,辽宁省优秀毕业生,大学生退伍士兵,校十佳大学生,国家级大学生创新创业项目，5GWN最佳论文奖，前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
 <meta property="og:type" content="website">
 <meta property="og:title" content="影像">
 <meta property="og:url" content="http://www.chengxinsong.cn/photos/we.html">
 <meta property="og:site_name" content="程新松博客网站safeguradEagle">
-<meta property="og:description" content="游记     我们     毕业     集训   我们一周年           毕业,我们不说再见                               (function() {             var scene, camera, renderer;             var tets=[];             var ROWS=200;">
+<meta property="og:description" content="游记     我们     毕业     集训   我们一周年           毕业,我们不说再见">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-08T05:04:37.868Z">
+<meta property="og:updated_time" content="2017-10-08T05:15:30.851Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="影像">
-<meta name="twitter:description" content="游记     我们     毕业     集训   我们一周年           毕业,我们不说再见                               (function() {             var scene, camera, renderer;             var tets=[];             var ROWS=200;">
+<meta name="twitter:description" content="游记     我们     毕业     集训   我们一周年           毕业,我们不说再见">
   
   
     <link rel="icon" href="/favicon.png">
@@ -215,7 +215,6 @@ var _hmt = _hmt || [];
           <hr>
           
                     <link rel="stylesheet" href="./ins.css">
-<link rel="stylesheet" href="./wave.css">
 <div class="photos-btn-wrap">
      <a class="photos-btn" href="./index.html">游记</a>
     <a class="photos-btn active" href="./we.html">我们</a>
@@ -243,109 +242,7 @@ var _hmt = _hmt || [];
 </div>
 </center>
 
-<!--wave start-->
- <div id="background"></div>
-     <script src="js/three.min.js"></script>
-    <script>
-        (function() {
-            var scene, camera, renderer;
-            var tets=[];
-            var ROWS=200;
-            var COLS=200;
-            var count=0;
-            var wave;
-            // 共用材质
-            var material;
 
-            init();
-
-            function init(){
-                createBasic3DScene();
-                material=new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,opacity:0.15,shading:THREE.SmoothShading});
-                wave=createWave();
-                createTets(10);
-                render();
-            }
-
-            function createBasic3DScene(){
-                scene=new THREE.Scene();
-                scene.fog=new THREE.Fog(0x2794ed,10,50);
-                camera=new THREE.PerspectiveCamera(80,window.innerWidth/window.innerHeight,0.1,1000);
-                camera.lookAt(scene.position);
-                camera.position.z=50;
-                renderer=new THREE.WebGLRenderer({
-                    antialias : true,
-                    alpha:true
-                });
-                renderer.setSize(window.innerWidth,window.innerHeight);
-                //设置canvas背景色
-                renderer.setClearColor(0x2794ed,1);
-                document.getElementById("background").appendChild(renderer.domElement);
-                window.addEventListener('resize',onWindowResize,false);
-            }
-
-            function onWindowResize(){
-                camera.aspect=window.innerWidth/window.innerHeight;
-                camera.updateProjectionMatrix();
-                renderer.setSize(window.innerWidth,window.innerHeight);
-            }
-
-            function render() {
-                requestAnimationFrame(render);
-                renderWave();
-                renderTets();
-                renderer.render( scene, camera );
-            }
-
-            // 渲染四面体
-            function renderTets(){
-                for(var j=0,len=tets.length;j<len;j++){
-                    var tet=tets[j];
-                    tet.rotation.x+=0.005;
-                    tet.rotation.y+=0.005;
-                }
-            }
-
-            // 渲染波浪
-            function renderWave(){
-                var i = 0;
-                for ( var ix = 0; ix < ROWS; ix ++ ) {
-                    for ( var iy = 0; iy < COLS; iy ++ ) {
-                        var vertice = wave.vertices[ i++ ];
-                        vertice.z = ( Math.sin( ( ix + count ) * 0.3 ) * 1 ) + ( Math.sin( ( iy + count ) * 0.5 ) * 1);
-                    }
-                }
-                wave.verticesNeedUpdate=true;
-                count += 0.02;
-            }
-
-            // 创建波形，其实是一个PlaneGeometry
-            function createWave(){
-                var plane=new THREE.PlaneGeometry(400,400,ROWS,COLS);
-                var mesh=new THREE.Mesh(plane,material);
-                mesh.rotation.x=-Math.PI*0.35;
-                mesh.rotation.z=Math.PI*1.5;
-                scene.add(mesh);
-                return plane;
-            }
-
-            // 创建10个四面体
-            function createTets(nums){
-                var geometry = new THREE.TetrahedronGeometry(3);
-                for(var i=0;i<nums;i++){
-                    var tet = new THREE.Mesh(geometry,material);
-                    tet.vx=Math.random()*0.005-0.0025;
-                    tet.vy=Math.random()*0.005-0.0025;
-                    tets.push(tet);
-                    var scale=.2+Math.random()*.8;
-                    tet.scale.set(scale,scale,scale);
-                    tet.position.set(Math.random()*80-40,Math.random()*15,10+Math.random()*20);
-                    scene.add(tet);
-                }
-            }
-        })();
-    </script>
-<!--wave end-->
                       
 
                         
@@ -547,6 +444,122 @@ var _hmt = _hmt || [];
 <!--水印-->
 <script src="js/watermark.js"></script>
 <script>watermark.load({ watermark_txt: "爱好折腾的码农 | saucxs | safeguardEagle | XinsongCheng" })</script>
+<!--wave start-->
+<style>
+  #background{
+            width:100%;
+            height:100%;
+            overflow:hidden;
+}
+
+#background canvas{
+            width:100%;
+            height:100%;
+}
+</style>
+ <div id="background"></div>
+    <script src="js/three.min.js"></script>
+    <script>
+        (function() {
+            var scene, camera, renderer;
+            var tets=[];
+            var ROWS=200;
+            var COLS=200;
+            var count=0;
+            var wave;
+            // 共用材质
+            var material;
+
+            init();
+
+            function init(){
+                createBasic3DScene();
+                material=new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,opacity:0.15,shading:THREE.SmoothShading});
+                wave=createWave();
+                createTets(10);
+                render();
+            }
+
+            function createBasic3DScene(){
+                scene=new THREE.Scene();
+                scene.fog=new THREE.Fog(0x2794ed,10,50);
+                camera=new THREE.PerspectiveCamera(80,window.innerWidth/window.innerHeight,0.1,1000);
+                camera.lookAt(scene.position);
+                camera.position.z=50;
+                renderer=new THREE.WebGLRenderer({
+                    antialias : true,
+                    alpha:true
+                });
+                renderer.setSize(window.innerWidth,window.innerHeight);
+                //设置canvas背景色
+                renderer.setClearColor(0x2794ed,1);
+                document.getElementById("background").appendChild(renderer.domElement);
+                window.addEventListener('resize',onWindowResize,false);
+            }
+
+            function onWindowResize(){
+                camera.aspect=window.innerWidth/window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth,window.innerHeight);
+            }
+
+            function render() {
+                requestAnimationFrame(render);
+                renderWave();
+                renderTets();
+                renderer.render( scene, camera );
+            }
+
+            // 渲染四面体
+            function renderTets(){
+                for(var j=0,len=tets.length;j<len;j++){
+                    var tet=tets[j];
+                    tet.rotation.x+=0.005;
+                    tet.rotation.y+=0.005;
+                }
+            }
+
+            // 渲染波浪
+            function renderWave(){
+                var i = 0;
+                for ( var ix = 0; ix < ROWS; ix ++ ) {
+                    for ( var iy = 0; iy < COLS; iy ++ ) {
+                        var vertice = wave.vertices[ i++ ];
+                        vertice.z = ( Math.sin( ( ix + count ) * 0.3 ) * 1 ) + ( Math.sin( ( iy + count ) * 0.5 ) * 1);
+                    }
+                }
+                wave.verticesNeedUpdate=true;
+                count += 0.02;
+            }
+
+            // 创建波形，其实是一个PlaneGeometry
+            function createWave(){
+                var plane=new THREE.PlaneGeometry(400,400,ROWS,COLS);
+                var mesh=new THREE.Mesh(plane,material);
+                mesh.rotation.x=-Math.PI*0.35;
+                mesh.rotation.z=Math.PI*1.5;
+                scene.add(mesh);
+                return plane;
+            }
+
+            // 创建10个四面体
+            function createTets(nums){
+                var geometry = new THREE.TetrahedronGeometry(3);
+                for(var i=0;i<nums;i++){
+                    var tet = new THREE.Mesh(geometry,material);
+                    tet.vx=Math.random()*0.005-0.0025;
+                    tet.vy=Math.random()*0.005-0.0025;
+                    tets.push(tet);
+                    var scale=.2+Math.random()*.8;
+                    tet.scale.set(scale,scale,scale);
+                    tet.position.set(Math.random()*80-40,Math.random()*15,10+Math.random()*20);
+                    scene.add(tet);
+                }
+            }
+        })();
+    </script>
+<!--wave end-->
+
 
 
     </div>
