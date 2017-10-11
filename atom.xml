@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.chengxinsong.cn/"/>
-  <updated>2017-09-26T08:16:49.951Z</updated>
+  <updated>2017-10-11T13:02:12.033Z</updated>
   <id>http://www.chengxinsong.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>手把手教你用npm发布一个包，详细教程</title>
+    <link href="http://www.chengxinsong.cn/npmPackjson.html"/>
+    <id>http://www.chengxinsong.cn/npmPackjson.html</id>
+    <published>2017-10-11T12:51:08.000Z</published>
+    <updated>2017-10-11T13:02:12.033Z</updated>
+    
+    <content type="html"><![CDATA[<p>我们已经实现了路由的自动化构建，但是我们可以看到，一大串代码怼在里面。当然你也可以说，把它封装在一个JS文件里面，然后使用require(‘./autoRoute.js’)给引入进来，那也行。但是，为什么不把心放大一点呢？比如说，我们把它做成一个npm包！</p><p>最初自己做的时候就是这种直接引入封装的JS文件里，可以参考：<a href="https://github.com/saucxs/watermark" target="_blank" rel="external">https://github.com/saucxs/watermark</a></p><a id="more"></a><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>1、将npm包的镜像换成  <a href="https://www.npmjs.com/" target="_blank" rel="external">https://www.npmjs.com/</a></p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config set registry https:<span class="comment">//www.npmjs.com/</span></div></pre></td></tr></table></figure><p>因为这个官方npm加载速度慢，之后再切换回来<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config set registry https:<span class="comment">//registry.npm.taobao.org</span></div></pre></td></tr></table></figure></p><p>2、自己电脑不是adminstrator权限，请切换到administrator用户。这个不需要告诉你怎么切换用户吧</p><p>3、注册一个npm账号</p><p>注册地址：<a href="https://www.npmjs.com/" target="_blank" rel="external">https://www.npmjs.com/</a></p><h2 id="初始化要封装的包"><a href="#初始化要封装的包" class="headerlink" title="初始化要封装的包"></a>初始化要封装的包</h2><p>1、择一个文件夹，然后用命令行cd进去<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init</div></pre></td></tr></table></figure></p><p>接下来就是一长串表单：</p><p>(1)name：填写你这个包的名字，默认是你这个文件夹的名字。不过这里要着重说一下，最好先去npm上找一下有没有同名的包。最好的测试方式就是，在命令行里面输入npm install 你要取的名字，如果报错，那么很好，npm上没有跟你同名的包，你可以放心大胆地把包发布出去。如果成功下载下来了。。。那么很不幸，改名字吧。。。<br>(2)version：你这个包的版本，默认是1.0.0<br>(3)description：这个用一句话描述你的包是干嘛用的，比如我就直接：‘watermark for dom’<br>(4)entry point：入口文件，默认是Index.js，你也可以自己填写你自己的文件名<br>(5)test command：测试命令，这个直接回车就好了，因为目前还不需要这个。<br>(6)git repository：这个是git仓库地址，如果你的包是先放到github上或者其他git仓库里，这时候你的文件夹里面会存在一个隐藏的.git目录，npm会读到这个目录作为这一项的默认值。如果没有的话，直接回车继续。<br>(7)keyword：这个是一个重点，这个关系到有多少人会搜到你的npm包。尽量使用贴切的关键字作为这个包的索引。我这个包嘛，第一是在express下工作的，然后又是一个插件plugin，然后又是一个注册路由route用的，而这个路由又是基于文件目录dir，所以很好就得出我的包的索引关键字。<br>(8)author：写你的账号或者你的github账号吧<br>(9)license：这个直接回车，开源文件来着。。。</p><p>PS：你可以一直回车，之后再packjson里进行编辑这个表单。<br><img src="/assets/blogImg/npmInstall.png" alt="packjson"></p><p>2、然后，在目录下新建一个index.js文件，或者你刚才修改了那个entry point的值，那么你这个文件名也跟着改为那个值。<br><img src="/assets/blogImg/npmInstall2.png" alt="packjson"><br>这个index.js里面我放了一个压缩的index.min.js。</p><p>3、然后，最重要的，写好README.md，一个给大家描述你的包的markdown文件，如果大家都不知道你的代码是做什么的，会有人去下载你的代码吗？哦，对了，最好写英文。我这里写了一套英文版的使用文档和一套中文版的使用文档。</p><h2 id="npm命令登录"><a href="#npm命令登录" class="headerlink" title="npm命令登录"></a>npm命令登录</h2><p>接下来就是：用npm命令登陆一下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm login</div></pre></td></tr></table></figure></p><p>登录的是自己注册的用户名和密码。</p><p>PS：或者使用添加npm用户<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm adduser</div></pre></td></tr></table></figure></p><h2 id="npm发布到官方网上"><a href="#npm发布到官方网上" class="headerlink" title="npm发布到官方网上"></a>npm发布到官方网上</h2><p>然后，在你的目录下使用npm publish<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm publish</div></pre></td></tr></table></figure></p><p>PS :每一次发布新的一版，version版本要改变，不然npm会给我报错。一般情况下，一旦你要修改你已经发布后的代码，然后又要执行发布操作，务必到package.json里面，把version改一下，比如从1.0.0改为1.0.1，然后在执行npm publish，这样就可以成功发布了。</p><h2 id="看一下发布的包"><a href="#看一下发布的包" class="headerlink" title="看一下发布的包"></a>看一下发布的包</h2><p>登录自己的npm官方，就可以看到自己发布的包</p><p><img src="/assets/blogImg/npmInstall3.png" alt="packjson"></p><h2 id="如何使用watermark-dom包（最后边是最重要的）"><a href="#如何使用watermark-dom包（最后边是最重要的）" class="headerlink" title="如何使用watermark-dom包（最后边是最重要的）"></a>如何使用watermark-dom包（最后边是最重要的）</h2><p>npm包引入</p><pre><code>第一步：获取水印组件包： npm install  watermark-dom第二步：引入水印模块：import watermark from &apos;watermark-dom&apos;第三步：在需要使用水印的页面js中调用水印初始化方法              watermark.init({ watermark_txt: &quot;测试水印&quot;});</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我们已经实现了路由的自动化构建，但是我们可以看到，一大串代码怼在里面。当然你也可以说，把它封装在一个JS文件里面，然后使用require(‘./autoRoute.js’)给引入进来，那也行。但是，为什么不把心放大一点呢？比如说，我们把它做成一个npm包！&lt;/p&gt;
+&lt;p&gt;最初自己做的时候就是这种直接引入封装的JS文件里，可以参考：&lt;a href=&quot;https://github.com/saucxs/watermark&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/saucxs/watermark&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="工作" scheme="http://www.chengxinsong.cn/categories/work/"/>
+    
+    
+      <category term="前端" scheme="http://www.chengxinsong.cn/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="npm" scheme="http://www.chengxinsong.cn/tags/npm/"/>
+    
+  </entry>
   
   <entry>
     <title>watermarkJS水印组件系列一(简单VS复杂)</title>
@@ -205,9 +230,9 @@
       <category term="工作" scheme="http://www.chengxinsong.cn/categories/work/"/>
     
     
-      <category term="前端" scheme="http://www.chengxinsong.cn/tags/%E5%89%8D%E7%AB%AF/"/>
-    
       <category term="杂谈" scheme="http://www.chengxinsong.cn/tags/%E6%9D%82%E8%B0%88/"/>
+    
+      <category term="前端" scheme="http://www.chengxinsong.cn/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   

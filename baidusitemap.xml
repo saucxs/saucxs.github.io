@@ -3,6 +3,28 @@
 
 
     
+  <url>
+    <loc>http://www.chengxinsong.cn/npmPackjson.html</loc>
+    <lastmod>2017-10-11T13:02:12.033Z</lastmod>
+    <data>
+        <display>
+        <title>手把手教你用npm发布一个包，详细教程</title>
+        <pubTime>2017-10-11T12:51:08.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>npm</tag>
+         
+         
+           
+             
+              <breadCrumb title="工作" url="http://www.chengxinsong.cn/categories/work/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
     
     
@@ -215,9 +237,9 @@
         <title>github+hexo搭建自己的博客网站（一）基础入门</title>
         <pubTime>2017-08-24T01:17:10.000Z</pubTime>
         
-        <tag>前端</tag>
-         
         <tag>杂谈</tag>
+         
+        <tag>前端</tag>
          
          
            
