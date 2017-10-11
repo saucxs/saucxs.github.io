@@ -13,7 +13,7 @@
         // Browser globals (root is window)
         root['watermark'] = factory();
     }
-}(this, function () {
+}(this, function (watermark) {
 
     // Just return a value to define the module export.
     var watermark = {};
