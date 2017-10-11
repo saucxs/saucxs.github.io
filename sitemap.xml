@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.chengxinsong.cn/js/wave.html</loc>
+    
+    <lastmod>2017-10-11T12:15:12.489Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.chengxinsong.cn/watermark/index.html</loc>
+    
+    <lastmod>2017-10-11T12:12:24.066Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.chengxinsong.cn/photos/we.html</loc>
     
     <lastmod>2017-10-08T05:15:30.851Z</lastmod>
@@ -82,13 +96,6 @@
     <loc>http://www.chengxinsong.cn/resume/honor.html</loc>
     
     <lastmod>2017-09-25T02:09:16.331Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.chengxinsong.cn/watermark/index.html</loc>
-    
-    <lastmod>2017-09-24T07:30:32.126Z</lastmod>
     
   </url>
   
@@ -205,13 +212,6 @@
   </url>
   
   <url>
-    <loc>http://www.chengxinsong.cn/assets/demo/hack_demo.html</loc>
-    
-    <lastmod>2017-08-26T08:51:25.772Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.chengxinsong.cn/assets/demo/jiugongge_demo.html</loc>
     
     <lastmod>2017-08-26T08:51:25.772Z</lastmod>
@@ -227,6 +227,13 @@
   
   <url>
     <loc>http://www.chengxinsong.cn/assets/demo/mediator/demo.html</loc>
+    
+    <lastmod>2017-08-26T08:51:25.772Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.chengxinsong.cn/assets/demo/hack_demo.html</loc>
     
     <lastmod>2017-08-26T08:51:25.772Z</lastmod>
     

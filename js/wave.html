@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://www.chengxinsong.cn">
   <title>程新松博客网站safeguradEagle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="技能特长-程新松官方网站 		 		 		 		 		 		 		 	  	 		 			 				 					           Toggle navigation                                           					 						 						程新松官方网站">
+  <meta name="description" content="Title        #background{         width:100%;         height:100%;         overflow:hidden;     }      #background canvas{         width:100%;         height:100%;     }         (function(">
 <meta name="keywords" content="程新松，沈阳航空航天大学，计算机学院，国家发明专利,辽宁省优秀毕业生,大学生退伍士兵,校十佳大学生,国家级大学生创新创业项目，5GWN最佳论文奖，前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
 <meta property="og:type" content="website">
 <meta property="og:title" content="程新松博客网站safeguradEagle">
-<meta property="og:url" content="http://www.chengxinsong.cn/resume/skill.html">
+<meta property="og:url" content="http://www.chengxinsong.cn/js/wave.html">
 <meta property="og:site_name" content="程新松博客网站safeguradEagle">
-<meta property="og:description" content="技能特长-程新松官方网站 		 		 		 		 		 		 		 	  	 		 			 				 					           Toggle navigation                                           					 						 						程新松官方网站">
+<meta property="og:description" content="Title        #background{         width:100%;         height:100%;         overflow:hidden;     }      #background canvas{         width:100%;         height:100%;     }         (function(">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-25T02:09:16.488Z">
+<meta property="og:updated_time" content="2017-10-11T12:15:12.489Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="程新松博客网站safeguradEagle">
-<meta name="twitter:description" content="技能特长-程新松官方网站 		 		 		 		 		 		 		 	  	 		 			 				 					           Toggle navigation                                           					 						 						程新松官方网站">
+<meta name="twitter:description" content="Title        #background{         width:100%;         height:100%;         overflow:hidden;     }      #background canvas{         width:100%;         height:100%;     }         (function(">
   
   
     <link rel="icon" href="/favicon.png">
@@ -202,352 +202,128 @@ var _hmt = _hmt || [];
         <div class="article-entry" itemprop="articleBody">
           <hr>
           
-                    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
+                    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    #background{
+        width:100%;
+        height:100%;
+        overflow:hidden;
+    }
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    #background canvas{
+        width:100%;
+        height:100%;
+    }
+</style>
+<div id="background"></div>
+<script src="js/three.min.js"></script>
+<script>
+    (function() {
+        var scene, camera, renderer;
+        var tets=[];
+        var ROWS=200;
+        var COLS=200;
+        var count=0;
+        var wave;
+        // 共用材质
+        var material;
 
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="keywords" content="程新松,沈阳航空航天大学计算机学院,国家发明专利，辽宁省优秀毕业生，大学生退伍士兵，校十佳大学生，国家级大学生创新创业项目，数学建模，ＡＣＭ——ＩＣＰＣ，网络信息安全，汽车发动机故障预警系统,学院网站,实习公司网站及网站后台管理系统">
-		<meta name="description" content="程新松,沈阳航空航天大学计算机学院,国家发明专利，辽宁省优秀毕业生，大学生退伍士兵，校十佳大学生，国家级大学生创新创业项目，数学建模，ＡＣＭ——ＩＣＰＣ，网络信息安全，汽车发动机故障预警系统,学院网站,实习公司网站及网站后台管理系统">
-		<title>技能特长-程新松官方网站
-		<link rel="Shortcut Icon" href="img/logo.png" type="image/x-icon">
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link href="" rel="shortcut icon" type="image/x-icon">
-		<link rel="stylesheet" type="text/css" href="css/common.css">
-		<link rel="stylesheet" type="text/css" href="css/index.css">
-		<link rel="stylesheet" href="css/pop_0411.css" id="zsp_css" media="all" type="text/css">
-		<!--[if IE 6.0]>
-	  <script src="statics/js/common/ie6png.js?v=3.2"></script>
-	  <style type="text/css">
-		*html{
- 		   background-image:url(about:blank);
-    	   background-attachment:fixed;
-		}
-	  </style>
-	<![endif]-->
-	</title></head>
+        init();
 
-	<body>
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-					<a class="navbar-brand" href="home.html">
-						<span class="glyphicon glyphicon-home"></span>
-						<strong>程新松官方网站</strong>
-					</a>
-				</div>
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-						<li>
-							<a href="Project_exp.html">项目经历</a>
-						</li>
-						<li>
-							<a href="resume.html" target="_blank">个人简历</a>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">编程<span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li>
-									<a href="intership.html">实习经历</a>
-								</li>
-								<li class="divider"></li>
-								<li>
-									<a href="skill.html">技能特长</a>
-								</li>
-								<li class="divider"></li>
-								<li>
-									<a href="honor.html">证书和荣誉</a>
-								</li>
-								<li class="divider"></li>
-								<li>
-									<a href="selfdescription.html">自我评价</a>
-								</li>
-								<li class="divider"></li>
-							</ul>
-						</li>
-						<!--<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">读书生活<span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li>
-									<a href="MyDarling/birthday.html">大媳妇生日快乐</a>
-								</li>
-							</ul>
-						</li>-->
-					</ul>
-					<ul class="nav navbar-nav ">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">联系我们 <span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li>
-									<a href="#">姓名：程新松</a>
-								</li>
-								<li>
-									<a href="#">电话：18842458912</a>
-								</li>
-								<li>
-									<a href="#">邮箱：15566151641@163.com</a>
-								</li>
-								<li class="divider"></li>
-								<li>
-									<a href="#">QQ：184866445</a>
-								</li>
-								<li>
-									<a href="#">微信：chengxinsong</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-					<!--搜索表单-->
-					<form class="navbar-form navbar-right" role="search">
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Search...">
-						</div>
-						<button type="submit" class="btn btn-primary">搜索</button>
-						<div class="form-group" style="padding-left: 10px; margin: 0px 12px;">
-							<a href="login.html" style="color: #D2D2D2;">登录</a>
-							<span style="color: #D2D2D2;padding-left: 5px;">|</span>
-							<a href="#" style="color: #D2D2D2;padding-left: 5px;">注册</a>
-						</div>
-					</form>
-				</div>
-			</div>
-		</nav>
-		<ol class="breadcrumb container" style="margin-top: 60px;">
-			<li>
-				<a href="home.html">首页</a>
-			</li>
-			<li>
-				<a href="skill.html">技能特长</a>
-			</li>
-			<li class="active">具体特长</li>
-		</ol>
+        function init(){
+            createBasic3DScene();
+            material=new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,opacity:0.15,shading:THREE.SmoothShading});
+            wave=createWave();
+            createTets(10);
+            render();
+        }
 
-		<div class="container">
-			<hr>
-			<h2>技能特长</h2>
+        function createBasic3DScene(){
+            scene=new THREE.Scene();
+            scene.fog=new THREE.Fog(0x2794ed,10,50);
+            camera=new THREE.PerspectiveCamera(80,window.innerWidth/window.innerHeight,0.1,1000);
+            camera.lookAt(scene.position);
+            camera.position.z=50;
+            renderer=new THREE.WebGLRenderer({
+                antialias : true,
+                alpha:true
+            });
+            renderer.setSize(window.innerWidth,window.innerHeight);
+            //设置canvas背景色
+            renderer.setClearColor(0x2794ed,1);
+            document.getElementById("background").appendChild(renderer.domElement);
+            window.addEventListener('resize',onWindowResize,false);
+        }
 
-			<div role="tabpanel">
-				<!-- Nav tabs -->
-				<ul class="nav nav-tabs" role="tablist">
-					<li role="presentation" class="active">
-						<a href="#home" aria-controls="home" role="tab" data-toggle="tab"> 1、WEB前端</a>
-					</li>
-					<li role="presentation">
-						<a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">2、前端框架</a>
-					</li>
-					<li role="presentation">
-						<a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">3、前后端开发</a>
-					</li>
-					<li role="presentation">
-						<a href="#messages-01" aria-controls="messages" role="tab" data-toggle="tab">4、最新的前端开发技术</a>
-					</li>
-					<li role="presentation">
-						<a href="#messages-02" aria-controls="messages" role="tab" data-toggle="tab">5、数据挖掘分析</a>
-					</li>
-					<li role="presentation">
-						<a href="#weixin" aria-controls="messages_exp" role="tab" data-toggle="tab">6、基本linux</a>
-					</li>
-					<li role="presentation">
-						<a href="#guangfang" aria-controls="messages_exp" role="tab" data-toggle="tab">7、mysql数据库</a>
-					</li>
-				</ul>
-				<!-- Tab panes -->
-				<div class="tab-content" style="margin-top: 30px; font-family: 微软雅黑; font-size:15px ">
-					<div role="tabpanel" class="tab-pane active" id="home">
-						<!--添加文字和图片介绍-->
-						<div class="row">
-							<div class="col-sm-7">
-								<div class="jumbotron">
-									<h2>WEB前端</h2>
-									<p>1、熟悉掌握web前端技术，掌握Photoshop，可以独立还原设计稿，熟练使用jQuery和javascript开发展示性页面，熟练使用ajax进行前后台数据交互，利用dom对象实现页面的交互，表单的数据的校验，有敏感数据加密意识。</p>
-									<div class="progress progress-striped active">
-										<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-											掌握程度：80%
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--第2部分-->
-					<div role="tabpanel" class="tab-pane" id="profile">
-						<!--添加文字和图片介绍-->
-						<div class="row">
-							<div class="col-sm-7">
-								<div class="jumbotron">
-									<h2>前端框架</h2>
-									<p>2、熟悉掌握Bootstrap，jQuery EasyUI等前端开发框架，可以独立使用框架进行前端开发，开发自己的博客网站以及后台管理系统。</p>
-									<div class="progress progress-striped active">
-										<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-											掌握程度：70%
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--第3部分-->
-					<div role="tabpanel" class="tab-pane" id="messages">
-						<!--添加文字和图片介绍-->
-						<div class="row">
-							<div class="col-sm-7">
-								<div class="jumbotron">
-									<h2>前后端开发</h2>
-									<p>3、熟练应用Java集成开发环境MyEclipse和Intellij IDEA，使用MVC架构进行Web前后台开发。</p>
-									<div class="progress progress-striped active">
-										<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-											掌握程度：70%
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--第3-1部分-->
-					<div role="tabpanel" class="tab-pane" id="messages-01">
-						<!--添加文字和图片介绍-->
-						<div class="row">
-							<div class="col-sm-7">
-								<div class="jumbotron">
-									<h2>前后端最新开发技术</h2>
-									<p>4、基本掌握node.js+react.js+webpack开发，node.js和Java后台开发语言，调用其他API接口。</p>
-									<div class="progress progress-striped active">
-										<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-											掌握程度：70%
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--3-2-->
-					<div role="tabpanel" class="tab-pane" id="messages-02">
-						<!--添加文字和图片介绍-->
-						<div class="row">
-							<div class="col-sm-7">
-								<div class="jumbotron">
-									<h2>数据挖掘分析</h2>
-									<p>5、基本掌握数据挖掘分析技术，可以独立对数据进行分类，预测，聚类，会使用SPSS的聚类分析，主成分分析，熟悉掌握MATLAB的神经网络工具箱进行数据的拟合，预测，求解。</p>
-									<div class="progress progress-striped active">
-										<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-											掌握程度：70%
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--第4部分-->
-					<div role="tabpanel" class="tab-pane" id="weixin">
-						<!--添加文字和图片介绍-->
-						<div class="row">
-							<div class="col-sm-7">
-								<div class="jumbotron">
-									<h2>基本LINUX</h2>
-									<p>6、掌握基本linux基本操作，基本命令，可以独立的配置yum环境，配置http服务，配置dns服务。</p>
-									<div class="progress progress-striped active">
-										<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
-											掌握程度：50%
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--diwubufen-->
-					<div role="tabpanel" class="tab-pane" id="guangfang">
-						<!--添加文字和图片介绍-->
-						<div class="row">
-							<div class="col-sm-7">
-								<div class="jumbotron">
-									<h2>mysql数据库</h2>
-									<p>7、基本掌握mysql数据库，通过ajax调用json状态机和controler类来实现与前端页面进行数据交互，实现增删改查功能，有数据查询优化意识。</p>
-									<div class="progress progress-striped active">
-										<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-											掌握程度：60%
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="fixed-box">
-					<div class="bb-icon"></div>
-					<div id="fixed-contact" class="hide-box">
-						<p class="title">联系方式</p>
-						<div class="open-content">
-							<div class="qq-contact can-border">
-								<div class="clearfix">
-									<p class="qq-tel text-bold">手机联系方式:</p>
-								</div>
-								<div class="clearfix">
-									<p class="qq-tel">程新松</p>
-									<p class="qq-num"><span class="q-n-icon"></span><span class="q-n-txt">188-4245-8912</span></p>
-								</div>
-							</div>
-							<div class="qq-contact can-border">
-								<div class="clearfix">
-									<p class="qq-title">QQ联系方式:</p>
-								</div>
-								<div class="clearfix">
-									<p class="qq-tel">safeguard eagle</p>
-									<p class="qq-num"><span class="q-n-icon"></span><span class="q-n-txt"> 184866445</span></p>
-								</div>
-							</div>
-							<div class="qq-contact can-border">
-								<div class="clearfix">
-									<p class="qq-title">微信联系方式:<span></span></p>
-									<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=694839513&amp;site=qq&amp;menu=yes" target="_blank" class="qq-pic"></a>
-								</div>
-								<div class="clearfix">
-									<p class="qq-tel">程新松</p>
-									<p class="qq-num"><span class="q-n-icon"></span><span class="q-n-txt">chengxinsong</span></p>
-								</div>
-							</div>
-							<div class="qq-contact">
-								<div class="clearfix">
-									<p class="qq-title">邮箱联系方式：<span></span></p>
-									<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=592873102&amp;site=qq&amp;menu=yes" target="_blank" class="qq-pic"></a>
-								</div>
-								<div class="clearfix">
-									<p class="qq-tel">163邮箱</p>
-									<p class="qq-num"><span class="q-n-txt">15566151641@163.com</span></p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<script>
-					var fixedContact = document.getElementById("fixed-contact");
-					fixedContact.onmouseover = function(e) {
-						this.className = "open-box";
-					}
-					fixedContact.onmouseout = function(e) {
-						this.className = "hide-box";
-					}
-				</script>
-					<!--footer-->
-					<div class="container" style="font-size: 12px; color: #999; margin: 0 auto;  width: 100%; text-align: center;padding: 20px 0;">
-						Copyright © 2016 <strong><a href="home.html" target="_blank">程新松官方网站</a></strong>&nbsp;
-						<strong><a href="home.html" target="_blank">www.chengxinsong.cn</a></strong> All Rights Reserved. 备案号：<strong><a target="_blank" href="http://www.miitbeian.gov.cn/">辽ICP备16015497号</a></strong>
-					</div>
-				</div>
-	</div></div></body>
+        function onWindowResize(){
+            camera.aspect=window.innerWidth/window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth,window.innerHeight);
+        }
+
+        function render() {
+            requestAnimationFrame(render);
+            renderWave();
+            renderTets();
+            renderer.render( scene, camera );
+        }
+
+        // 渲染四面体
+        function renderTets(){
+            for(var j=0,len=tets.length;j<len;j++){
+                var tet=tets[j];
+                tet.rotation.x+=0.005;
+                tet.rotation.y+=0.005;
+            }
+        }
+
+        // 渲染波浪
+        function renderWave(){
+            var i = 0;
+            for ( var ix = 0; ix < ROWS; ix ++ ) {
+                for ( var iy = 0; iy < COLS; iy ++ ) {
+                    var vertice = wave.vertices[ i++ ];
+                    vertice.z = ( Math.sin( ( ix + count ) * 0.3 ) * 1 ) + ( Math.sin( ( iy + count ) * 0.5 ) * 1);
+                }
+            }
+            wave.verticesNeedUpdate=true;
+            count += 0.02;
+        }
+
+        // 创建波形，其实是一个PlaneGeometry
+        function createWave(){
+            var plane=new THREE.PlaneGeometry(400,400,ROWS,COLS);
+            var mesh=new THREE.Mesh(plane,material);
+            mesh.rotation.x=-Math.PI*0.35;
+            mesh.rotation.z=Math.PI*1.5;
+            scene.add(mesh);
+            return plane;
+        }
+
+        // 创建10个四面体
+        function createTets(nums){
+            var geometry = new THREE.TetrahedronGeometry(3);
+            for(var i=0;i<nums;i++){
+                var tet = new THREE.Mesh(geometry,material);
+                tet.vx=Math.random()*0.005-0.0025;
+                tet.vy=Math.random()*0.005-0.0025;
+                tets.push(tet);
+                var scale=.2+Math.random()*.8;
+                tet.scale.set(scale,scale,scale);
+                tet.position.set(Math.random()*80-40,Math.random()*15,10+Math.random()*20);
+                scene.add(tet);
+            }
+        }
+    })();
+</script>
+</body>
 </html>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-<script src="http://cdn.bootcss .com/respond.js/1.4.2/respond.min.js"></script>
                       
 
                         
@@ -649,7 +425,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.chengxinsong.cn/resume/skill.html" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.chengxinsong.cn/js/wave.html" alt="微信分享二维码">
     </div>
 </div>
 
