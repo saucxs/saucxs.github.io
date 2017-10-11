@@ -443,7 +443,15 @@ var _hmt = _hmt || [];
 </footer>
 <!--水印-->
 <script src="js/watermark.js"></script>
-<script>watermark.init({ watermark_txt: "爱好折腾的码农 | saucxs | safeguardEagle | XinsongCheng" })</script>
+<script type="text/javascript">
+  watermark.init({
+    watermark_txt: "爱好折腾的码农 | saucxs | safeguardEagle | XinsongCheng",
+    watermark_x_space: 20,
+    watermark_y_space: 20,
+    watermark_parent_node: document.getElementsByClassName('trend rowH')[0]
+  });
+</script>
+
 
     </div>
     <script>
