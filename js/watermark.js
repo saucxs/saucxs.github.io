@@ -32,7 +32,7 @@
             watermark_y_space:50,               //水印y轴间隔
             watermark_font:'微软雅黑',           //水印字体
             watermark_color:'black',            //水印字体颜色
-            watermark_fontsize:'18px',          //水印字体大小
+            watermark_fontsize:'12px',          //水印字体大小
             watermark_alpha:0.15,               //水印透明度，要求设置在大于等于0.005
             watermark_width:100,                //水印宽度
             watermark_height:100,               //水印长度
