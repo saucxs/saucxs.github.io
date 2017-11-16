@@ -4,30 +4,8 @@
 
     
   <url>
-    <loc>http://www.chengxinsong.cn/demo.html</loc>
-    <lastmod>2017-11-16T13:10:53.117Z</lastmod>
-    <data>
-        <display>
-        <title>demo</title>
-        <pubTime>2017-11-05T13:38:35.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>demo</tag>
-         
-         
-           
-             
-              <breadCrumb title="工作" url="http://www.chengxinsong.cn/categories/work/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.chengxinsong.cn/canvasStudy01.html</loc>
-    <lastmod>2017-11-11T13:27:27.526Z</lastmod>
+    <lastmod>2017-11-16T13:30:21.365Z</lastmod>
     <data>
         <display>
         <title>canvasStudy01</title>
@@ -47,14 +25,27 @@
     </url>
 
     
-    
-    
-    
-    
-    
-    
-    
-    
+  <url>
+    <loc>http://www.chengxinsong.cn/demo.html</loc>
+    <lastmod>2017-11-16T13:15:25.146Z</lastmod>
+    <data>
+        <display>
+        <title>demo</title>
+        <pubTime>2017-11-05T13:38:35.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>demo</tag>
+         
+         
+           
+             
+              <breadCrumb title="工作" url="http://www.chengxinsong.cn/categories/work/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
     
     

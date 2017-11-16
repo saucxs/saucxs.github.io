@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://img.alicdn.com/tps/TB1Oyf8MVXXXXX9XXXXXXXXXXXX-425-170.png">
 <meta property="og:image" content="https://img.alicdn.com/tps/TB1VMIaMVXXXXXjXXXXXXXXXXXX-183-181.png">
 <meta property="og:image" content="https://img.alicdn.com/tps/TB1drnVMVXXXXbqXVXXXXXXXXXX-127-194.png">
-<meta property="og:updated_time" content="2017-11-11T13:27:27.526Z">
+<meta property="og:updated_time" content="2017-11-16T13:30:21.365Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="canvasStudy01">
 <meta name="twitter:description" content="其实canvas本身很简单，就是去学习它的API，多看实例，多自己动手练习，多总结。但是canvas的API实在是有点多，对于初学者来说，可能学到一半就止步不前了。我也有这种感觉，在学习的过程中，编写实例，用到了其中很多的属性和方法，但是回头来看的时候总觉得什么也没用。所以决定系统性的记录一下它常用到的API，方便以后查阅，也顺便造福一下大家。 另外：附一个之前学习的时候自己跟着教程写的一个小游戏">
@@ -351,7 +351,7 @@ var _hmt = _hmt || [];
 <li><code>setInterval(myFun, 10);</code> 意思是隔一毫秒执行一个myFun函数，但是这样就有一个问题了，比如我myFun函数里面绘制的东西比较耗时，而10ms之内还没有完全绘制出来，但是这段代码强制1ms之后又开始绘制下一帧了，所以就会出现<code>丢帧</code>的问题；反之，如果时间设置太长，就会出现<code>画面不流畅、视觉卡顿</code>的问题。</li>
 <li><code>requestAnimationFrame(myFun);</code> 如果我们这样写，又是什么意思呢？意思是根据一定的时间间隔，会自动执行myFun函数来进行绘制。这个”一定的时间间隔”就是根据浏览器的性能或者网速快慢来决定了，总之，它会保证你绘制完这一帧，才会绘制下一帧，保证性能的同时，也保证动画的流畅。</li>
 </ul>
-<p><a href="http://www.chengxinsong.cn//tinyHeart/index.html">大鱼吃小鱼</a></p>
+<p><a href="http://www.mwcxs.top/tinyHeart/index.html" target="_blank" rel="external">大鱼吃小鱼</a></p>
 <h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>这些API已经包含了大部分常用的了，结合requestAnimationFrame函数已经可以绘制很多酷炫的效果了。但是光看这些API很简单，但是想要在绘制游戏或者动画中用起来得心应手还需要看大量的实例，自己实践总结的。</p>
 <p>本文就到这里，感谢各位看官～</p>
 <hr>
@@ -727,10 +727,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
@@ -739,7 +735,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">npm</a>
+                <a href="javascript:void(0)" class="js-tag color2">canvas</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">demo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -747,15 +751,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">canvas</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">测试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">demo</a>
+                <a href="javascript:void(0)" class="js-tag color4">npm</a>
               </li>
              
               <li class="article-tag-list-item">

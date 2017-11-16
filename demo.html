@@ -10,20 +10,20 @@
   <link rel="dns-prefetch" href="http://www.chengxinsong.cn">
   <title>demo | 程新松博客网站safeguradEagle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端（各种demo）二：左侧导航栏的折叠和打开（不使用js）基础版和升级版 1.给div设置定位。 　　复习一下—— 　　css中position有五种属性： 　　　　static:默认值，没有定位 　　　　absolute:绝对定位，相对于父级元素进行定位 　　　　relative:相对定位 　　　　fixed:固定定位,相对于浏览器窗口进行定位 　　　　inherit:从父元素继承定位信息">
+  <meta name="description" content="前端（各种demo）二：左侧导航栏的折叠和打开（不使用js）基础版和升级版">
 <meta name="keywords" content="前端,demo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="demo">
 <meta property="og:url" content="http://www.chengxinsong.cn/demo.html">
 <meta property="og:site_name" content="程新松博客网站safeguradEagle">
-<meta property="og:description" content="前端（各种demo）二：左侧导航栏的折叠和打开（不使用js）基础版和升级版 1.给div设置定位。 　　复习一下—— 　　css中position有五种属性： 　　　　static:默认值，没有定位 　　　　absolute:绝对定位，相对于父级元素进行定位 　　　　relative:相对定位 　　　　fixed:固定定位,相对于浏览器窗口进行定位 　　　　inherit:从父元素继承定位信息">
+<meta property="og:description" content="前端（各种demo）二：左侧导航栏的折叠和打开（不使用js）基础版和升级版">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://www.chengxinsong.cn/assets/blogImg/demo-1105-1.png">
 <meta property="og:image" content="http://www.chengxinsong.cn/assets/blogImg/demo-1105-2.png">
-<meta property="og:updated_time" content="2017-11-16T13:10:53.117Z">
+<meta property="og:updated_time" content="2017-11-16T13:15:25.146Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="demo">
-<meta name="twitter:description" content="前端（各种demo）二：左侧导航栏的折叠和打开（不使用js）基础版和升级版 1.给div设置定位。 　　复习一下—— 　　css中position有五种属性： 　　　　static:默认值，没有定位 　　　　absolute:绝对定位，相对于父级元素进行定位 　　　　relative:相对定位 　　　　fixed:固定定位,相对于浏览器窗口进行定位 　　　　inherit:从父元素继承定位信息">
+<meta name="twitter:description" content="前端（各种demo）二：左侧导航栏的折叠和打开（不使用js）基础版和升级版">
 <meta name="twitter:image" content="http://www.chengxinsong.cn/assets/blogImg/demo-1105-1.png">
   
   
@@ -245,18 +245,7 @@ var _hmt = _hmt || [];
           <hr>
           
                     <p>前端（各种demo）二：左侧导航栏的折叠和打开（不使用js）基础版和升级版</p>
-<p>1.给div设置定位。</p>
-<p>　　复习一下——</p>
-<p>　　css中position有五种属性：</p>
-<p>　　　　static:默认值，没有定位</p>
-<p>　　　　absolute:绝对定位，相对于父级元素进行定位</p>
-<p>　　　　relative:相对定位</p>
-<p>　　　　fixed:固定定位,相对于浏览器窗口进行定位</p>
-<p>　　　　inherit:从父元素继承定位信息　<br><a id="more"></a>　</p>
-<p>除了默认值static和inherit之外，添加其他三种都可以实现窗口自适应。</p>
-<p>在做管控类的项目的时候总会遇到右侧的导航栏的折叠和打开问题，不使用js实现，纯粹的css实现，更准确的说应该是使用css3的checked实现的。</p>
-<p>主要属性是：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">menu :checked + .menu-item-list &#123;</div><div class="line">        max-height: 500px;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>　<br><br>1.给div设置定位。<br><br>　　复习一下——<br><br>　　css中position有五种属性：<br><br>　　　　static:默认值，没有定位<br><br>　　　　absolute:绝对定位，相对于父级元素进行定位<br><br>　　　　relative:相对定位<br><br>　　　　fixed:固定定位,相对于浏览器窗口进行定位<br><br>　　　　inherit:从父元素继承定位信息　<br><br>除了默认值static和inherit之外，添加其他三种都可以实现窗口自适应。<br><br>在做管控类的项目的时候总会遇到右侧的导航栏的折叠和打开问题，不使用js实现，纯粹的css实现，更准确的说应该是使用css3的checked实现的。<br><br>主要属性是：<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">menu :checked + .menu-item-list &#123;</div><div class="line">        max-height: 500px;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <p>效果：<br><img src="/assets/blogImg/demo-1105-1.png" alt="效果"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</div><div class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;</div><div class="line">    &lt;title&gt;Document&lt;/title&gt;</div><div class="line">    &lt;style&gt;</div><div class="line">    * &#123;</div><div class="line">        padding: 0;</div><div class="line">        margin: 0;</div><div class="line">        box-sizing: border-box;</div><div class="line">    &#125;</div><div class="line">    menu &#123;</div><div class="line">        width: 180px;</div><div class="line">        max-height: 100%;</div><div class="line">        overflow: auto;</div><div class="line">        background-color: #15f5f5;</div><div class="line">    &#125;    </div><div class="line">    menu .menu-item &#123;</div><div class="line">        position: relative;</div><div class="line">    &#125;</div><div class="line">    menu .menu-item &gt; input &#123;</div><div class="line">        position: absolute;</div><div class="line">        top: 0;</div><div class="line">        left: 0;</div><div class="line">        width: 100%;</div><div class="line">        height: 46px;</div><div class="line">        opacity: 0;</div><div class="line">        cursor: pointer;</div><div class="line">    &#125;</div><div class="line">    .menu-parent:hover&#123;</div><div class="line">        background-color: rgba(0, 0, 0, 0.06);</div><div class="line">    &#125;</div><div class="line">    .menu-parent:visited&#123;</div><div class="line">        color: #fff;</div><div class="line">        background-color: #5375f1;</div><div class="line">    &#125;</div><div class="line">    menu span &#123;</div><div class="line">        display: block;</div><div class="line">        padding: 5px 10px;</div><div class="line">        font-size: 16px;</div><div class="line">        line-height: 36px;</div><div class="line">        cursor: pointer;</div><div class="line">    &#125;</div><div class="line">    menu span:hover &#123;</div><div class="line">        background-color: rgba(0, 0, 0, 0.06);</div><div class="line">    &#125;</div><div class="line">    menu span:active&#123;</div><div class="line">        color: #fff;</div><div class="line">        background-color: #5375f1;</div><div class="line">    &#125;</div><div class="line">    menu span.menu-child &#123;</div><div class="line">        font-size: 14px;</div><div class="line">        text-indent: 20px;</div><div class="line">    &#125;</div><div class="line">    menu .menu-item-list &#123;</div><div class="line">        max-height: 0;</div><div class="line">        overflow: hidden;</div><div class="line">        transition: all .3s ease;</div><div class="line">    &#125;</div><div class="line">    menu :checked + .menu-item-list &#123;</div><div class="line">        max-height: 500px;</div><div class="line">    &#125;</div><div class="line">    &lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;div class=&quot;box&quot;&gt;</div><div class="line">        &lt;menu&gt;</div><div class="line">            &lt;div class=&quot;menu-item&quot;&gt;</div><div class="line">                &lt;span class=&quot;menu-parent&quot;&gt;菜单1&lt;/span&gt;</div><div class="line">                &lt;input type=&quot;checkbox&quot; name=&quot;&quot; value=&quot;&quot;&gt;</div><div class="line">                &lt;div class=&quot;menu-item-list&quot;&gt;</div><div class="line">                    &lt;span class=&quot;menu-child&quot;&gt;子菜单1&lt;/span&gt;</div><div class="line">                    &lt;span class=&quot;menu-child&quot;&gt;子菜单2&lt;/span&gt;</div><div class="line">                    &lt;span class=&quot;menu-child&quot;&gt;子菜单3&lt;/span&gt;</div><div class="line">                    &lt;span class=&quot;menu-child&quot;&gt;子菜单4&lt;/span&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=&quot;menu-item&quot;&gt;</div><div class="line">                &lt;span class=&quot;menu-parent&quot;&gt;菜单2&lt;/span&gt;</div><div class="line">                &lt;input type=&quot;checkbox&quot; name=&quot;&quot; value=&quot;&quot;&gt;</div><div class="line">                &lt;div class=&quot;menu-item-list&quot;&gt;</div><div class="line">                    &lt;span class=&quot;menu-child&quot;&gt;子菜单1&lt;/span&gt;</div><div class="line">                    &lt;span class=&quot;menu-child&quot;&gt;子菜单2&lt;/span&gt;</div><div class="line">                    &lt;span class=&quot;menu-child&quot;&gt;子菜单3&lt;/span&gt;</div><div class="line">                    &lt;span class=&quot;menu-child&quot;&gt;子菜单4&lt;/span&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=&quot;menu-item&quot;&gt;</div><div class="line">                &lt;span class=&quot;menu-parent&quot;&gt;菜单3&lt;/span&gt;</div><div class="line">                &lt;input type=&quot;checkbox&quot; name=&quot;&quot; value=&quot;&quot;&gt;</div><div class="line">                &lt;div class=&quot;menu-item-list&quot;&gt;</div><div class="line">                    &lt;span class=&quot;menu-child&quot;&gt;子菜单1&lt;/span&gt;</div><div class="line">                    &lt;span class=&quot;menu-child&quot;&gt;子菜单2&lt;/span&gt;</div><div class="line">                    &lt;span class=&quot;menu-child&quot;&gt;子菜单3&lt;/span&gt;</div><div class="line">                    &lt;span class=&quot;menu-child&quot;&gt;子菜单4&lt;/span&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">        &lt;/menu&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
 <p>升级版</p>
@@ -645,10 +634,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
@@ -657,7 +642,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">npm</a>
+                <a href="javascript:void(0)" class="js-tag color2">canvas</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">demo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -665,15 +658,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">canvas</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">测试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">demo</a>
+                <a href="javascript:void(0)" class="js-tag color4">npm</a>
               </li>
              
               <li class="article-tag-list-item">
