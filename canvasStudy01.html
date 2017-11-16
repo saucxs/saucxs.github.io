@@ -10,13 +10,13 @@
   <link rel="dns-prefetch" href="http://www.chengxinsong.cn">
   <title>canvasStudy01 | 程新松博客网站safeguradEagle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="其实canvas本身很简单，就是去学习它的API，多看实例，多自己动手练习，多总结。但是canvas的API实在是有点多，对于初学者来说，可能学到一半就止步不前了。我也有这种感觉，在学习的过程中，编写实例，用到了其中很多的属性和方法，但是回头来看的时候总觉得什么也没用。所以决定系统性的记录一下它常用到的API，方便以后查阅，也顺便造福一下大家。 另外：附一个之前学习的时候自己跟着教程写的一个小游">
+  <meta name="description" content="其实canvas本身很简单，就是去学习它的API，多看实例，多自己动手练习，多总结。但是canvas的API实在是有点多，对于初学者来说，可能学到一半就止步不前了。我也有这种感觉，在学习的过程中，编写实例，用到了其中很多的属性和方法，但是回头来看的时候总觉得什么也没用。所以决定系统性的记录一下它常用到的API，方便以后查阅，也顺便造福一下大家。 另外：附一个之前学习的时候自己跟着教程写的一个小游戏">
 <meta name="keywords" content="前端,canvas">
 <meta property="og:type" content="article">
 <meta property="og:title" content="canvasStudy01">
 <meta property="og:url" content="http://www.chengxinsong.cn/canvasStudy01.html">
 <meta property="og:site_name" content="程新松博客网站safeguradEagle">
-<meta property="og:description" content="其实canvas本身很简单，就是去学习它的API，多看实例，多自己动手练习，多总结。但是canvas的API实在是有点多，对于初学者来说，可能学到一半就止步不前了。我也有这种感觉，在学习的过程中，编写实例，用到了其中很多的属性和方法，但是回头来看的时候总觉得什么也没用。所以决定系统性的记录一下它常用到的API，方便以后查阅，也顺便造福一下大家。 另外：附一个之前学习的时候自己跟着教程写的一个小游">
+<meta property="og:description" content="其实canvas本身很简单，就是去学习它的API，多看实例，多自己动手练习，多总结。但是canvas的API实在是有点多，对于初学者来说，可能学到一半就止步不前了。我也有这种感觉，在学习的过程中，编写实例，用到了其中很多的属性和方法，但是回头来看的时候总觉得什么也没用。所以决定系统性的记录一下它常用到的API，方便以后查阅，也顺便造福一下大家。 另外：附一个之前学习的时候自己跟着教程写的一个小游戏">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://img.alicdn.com/tps/TB1MubjMVXXXXXuXFXXXXXXXXXX-143-158.png">
 <meta property="og:image" content="https://img.alicdn.com/tps/TB1XRvfMVXXXXccXFXXXXXXXXXX-181-139.png">
@@ -28,10 +28,10 @@
 <meta property="og:image" content="https://img.alicdn.com/tps/TB1Oyf8MVXXXXX9XXXXXXXXXXXX-425-170.png">
 <meta property="og:image" content="https://img.alicdn.com/tps/TB1VMIaMVXXXXXjXXXXXXXXXXXX-183-181.png">
 <meta property="og:image" content="https://img.alicdn.com/tps/TB1drnVMVXXXXbqXVXXXXXXXXXX-127-194.png">
-<meta property="og:updated_time" content="2017-11-05T14:34:28.128Z">
+<meta property="og:updated_time" content="2017-11-11T13:27:27.526Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="canvasStudy01">
-<meta name="twitter:description" content="其实canvas本身很简单，就是去学习它的API，多看实例，多自己动手练习，多总结。但是canvas的API实在是有点多，对于初学者来说，可能学到一半就止步不前了。我也有这种感觉，在学习的过程中，编写实例，用到了其中很多的属性和方法，但是回头来看的时候总觉得什么也没用。所以决定系统性的记录一下它常用到的API，方便以后查阅，也顺便造福一下大家。 另外：附一个之前学习的时候自己跟着教程写的一个小游">
+<meta name="twitter:description" content="其实canvas本身很简单，就是去学习它的API，多看实例，多自己动手练习，多总结。但是canvas的API实在是有点多，对于初学者来说，可能学到一半就止步不前了。我也有这种感觉，在学习的过程中，编写实例，用到了其中很多的属性和方法，但是回头来看的时候总觉得什么也没用。所以决定系统性的记录一下它常用到的API，方便以后查阅，也顺便造福一下大家。 另外：附一个之前学习的时候自己跟着教程写的一个小游戏">
 <meta name="twitter:image" content="https://img.alicdn.com/tps/TB1MubjMVXXXXXuXFXXXXXXXXXX-143-158.png">
   
   
@@ -252,8 +252,7 @@ var _hmt = _hmt || [];
         <div class="article-entry" itemprop="articleBody">
           <hr>
           
-                    <hr>
-<p>其实canvas本身很简单，就是去学习它的API，多看实例，多自己动手练习，多总结。但是canvas的API实在是有点多，对于初学者来说，可能学到一半就止步不前了。我也有这种感觉，在学习的过程中，编写实例，用到了其中很多的属性和方法，但是回头来看的时候总觉得什么也没用。所以决定系统性的记录一下它常用到的API，方便以后查阅，也顺便造福一下大家。</p>
+                    <p>其实canvas本身很简单，就是去学习它的API，多看实例，多自己动手练习，多总结。但是canvas的API实在是有点多，对于初学者来说，可能学到一半就止步不前了。我也有这种感觉，在学习的过程中，编写实例，用到了其中很多的属性和方法，但是回头来看的时候总觉得什么也没用。所以决定系统性的记录一下它常用到的API，方便以后查阅，也顺便造福一下大家。</p>
 <p>另外：附一个之前学习的时候自己跟着教程写的一个小游戏：<br><a id="more"></a></p>
 <h1 id="开始之前"><a href="#开始之前" class="headerlink" title="开始之前"></a>开始之前</h1><p>假设html代码中有一个canvas标签：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;canvas id=<span class="string">"canvas"</span>&gt;你的浏览器不支持canvas！&lt;<span class="regexp">/canvas&gt;</span></div></pre></td></tr></table></figure>
@@ -728,6 +727,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
@@ -736,15 +739,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">css3</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">canvas</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">demo</a>
+                <a href="javascript:void(0)" class="js-tag color4">npm</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -752,7 +747,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">npm</a>
+                <a href="javascript:void(0)" class="js-tag color2">canvas</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -760,7 +755,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color5">demo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">css3</a>
               </li>
             
             <div class="clearfix"></div>
